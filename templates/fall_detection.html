@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fall_detection.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+   .w3-bar{
+    background-color: white;
+    opacity: 80%;
+    margin-left:200px;
+   width: 1000px;
+    }
+    #mrgn{
+        margin-top: 80px;
+      
+    }
+    form {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 450px;
+    margin-top: 50px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="url"]  {
+    width: 800px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(203, 205, 202, 0.809);
+    margin-left: 300px;
+  }
+  input[type="submit"] {
+    background-color: #708083c2;
+    color: white;
+    padding: 12px 20px;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 250px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #708083;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0)
+  }
+
+  .forget-pass {
+    padding-left: 145px;
+  }
+  form{
+    align-items: center;
+  }
+  .AXR{
+    text-align: center;
+  }
+  .Line{
+    color: rgb(223, 223, 223);
+  }
+  .rem-me {
+     vertical-align: middle;
+  }*{
+    margin: 0px;
+    padding: 0px;
+
+}
+nav{
+      display: flex;
+         align-items: center;
+         height: 80px;
+
+    }
+    nav ul{
+            display: flex;
+            height: 30px;
+            font-size: 23px;
+            font-family: 'Retrokia Caps Regular', Courier, monospace;
+            margin-top: 10px;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+        text-decoration: none;
+       
+        
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    nav .left ul li a:hover{
+           
+           text-decoration: underline;            
+    }
+    body{
+        background-image: url(leaves.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .right
+{
+   text-align: center;
+   margin-left: auto;
+   margin-right: 50px;
+   border: 2px solid #4CAF50;
+   border-radius: 10px;
+   transition-duration: 0.5s;
+   
+}
+.right:hover {
+background-color: #4CAF50;
+color: white;
+border-radius: 10px;
+}
+
+.left{
+    margin-left: 50px;
+}
+
+.crash
+{
+    font-size: 50px;
+    color: rgb(166, 167, 165);
+    text-align: center;
+    margin-top: 150px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.submit{
+    margin-top: 30px;
+    margin-left: 565px;
+}
+
+
+
+    
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <ul>
+                 <li><a href="white.html">HOME</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="https://ultralytics.com/yolov8">YOLO</a></li>  
+                 <li><a href="">HELP</a></li> 
+                    
+            </div>
+            </ul>
+            </nav>
+    
+    </header>
+    <main>
+        <div class="crash">
+           Fall Detection
+        </div>
+        <div class="search">
+            <form action="/action_page.php">
+                <input type="url" placeholder="Search.." name="search" required>
+                <input type="submit" a value="Detect Fall" class="submit"><br>
+                
+              </form>
+        </div>
+    </main> 
+</body>
+</html>
+

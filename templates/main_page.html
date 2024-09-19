@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main_page.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+   .w3-bar{
+    background-color: white;
+    opacity: 80%;
+    margin-left:200px;
+   width: 1000px;
+    }
+    #mrgn{
+        margin-top: 80px;
+      
+    }
+
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    background-color: #e3e9ee;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #708083;
+    color: white;
+    padding: 12px 20px;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #708083;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0)
+  }
+
+  .forget-pass {
+    padding-left: 145px;
+  }
+  form{
+    align-items: center;
+    background-color: #b7ced8;
+  }
+  .AXR{
+    text-align: center;
+  }
+  .Line{
+    color: rgb(223, 223, 223);
+  }
+  .rem-me {
+     vertical-align: middle;
+  }*{
+    margin: 0px;
+    padding: 0px;
+
+}
+nav{
+      display: flex;
+         align-items: center;
+         height: 80px;
+
+    }
+    nav ul{
+            display: flex;
+            height: 30px;
+            font-size: 23px;
+            font-family: 'Retrokia Caps Regular', Courier, monospace;
+            margin-top: 10px;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+        text-decoration: none;
+       
+        
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    nav .left ul li a:hover{
+           
+           text-decoration: underline;            
+    }
+    body{
+        background-image: url(leaves.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .right
+{
+   text-align: center;
+   margin-left: auto;
+   margin-right: 50px;
+   border: 2px solid #4CAF50;
+   border-radius: 10px;
+   transition-duration: 0.5s;
+   
+}
+.right:hover {
+background-color: #4CAF50;
+color: white;
+border-radius: 10px;
+}
+
+.left{
+    margin-left: 50px;
+}
+.team{
+color:rgb(178, 176, 176);
+font-size: 90px;
+justify-content: center;
+text-align: center;
+margin-top: 200px;
+font-family: 'Cormorant Garamond', serif;
+text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.text{
+color:rgb(166, 167, 165);
+font-size: 40px;
+justify-content: center;
+text-align: center;
+margin-top: 0px;
+font-family:'Playfair Display', serif;
+text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.maincontainer{
+    height: 500px;
+    background-color: #708083bc;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 15px;
+
+}
+div.gallery {
+ 
+  margin-top: 60px;
+  margin-left: 100px;
+  
+ justify-content: space-around;
+  float: left;
+  width: 23%;
+}
+
+div.gallery:hover {
+    box-shadow: 10px 10px 4px rgb(57, 57, 57);
+    text-shadow: 10px 10px 8px rgb(57, 57, 57);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(46, 46, 46);
+}
+.cctv{
+  text-align: center;
+  color:rgb(193, 194, 191);
+  font-size: 35px;
+  text-decoration: underline;
+}
+hr.new{
+  color:rgb(166, 167, 165) ;
+}
+
+
+
+
+
+    
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <ul>
+                 <li><a href="white.html">HOME</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="https://ultralytics.com/yolov8">YOLO</a></li>  
+                 <li><a href="">HELP</a></li>    
+                 
+            </div>
+            </ul>
+            </nav>
+    
+    </header>
+    <div class="maincontainer">
+<div class="cctv">
+  CCTV CAMERA ANALYSIS
+</div>
+
+    <div class="gallery" id="img1">
+        <a target="_blank" href="crash.html">
+          <img src="crash.jpg" alt="Cinque Terre" style="height: 187px">
+        </a>
+        <div class="desc">Crash Detectation</div>
+      </div>
+      
+      <div class="gallery" id="img2">
+        <a target="_blank" href="fall_detection.html">
+          <img src="fall.jpg" alt="Forest" >
+        </a>
+        <div class="desc">Fall Detection</div>
+      </div>
+      
+      <div class="gallery" id="img3">
+        <a target="_blank" href="Number_plate.html">
+          <img src="Numberplate.png" alt="Northern Lights" style="height: 187px">
+        </a>
+        <div class="desc">Number plate recognation</div>
+      </div>
+      
+      
+   
+</body>
+</html>
+
