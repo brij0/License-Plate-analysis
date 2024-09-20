@@ -49,7 +49,7 @@ def send_email_license(image_path, license_plate, color, model, time_of_notice, 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(sender_email, sender_password)
-    server.sendmail(sender_email, r eceiver_email, msg.as_string())
+    server.sendmail(sender_email, receiver_email, msg.as_string())
     server.quit()
 
 
@@ -67,7 +67,7 @@ def plate_recog():
 
     # Load YOLO models for object and license plate detection
     coco_model = YOLO('./YOLO-PretrainedModels/yolov8n.pt')  # Pretrained YOLO model for car detection
-    license_plate_detector = YOLO('license_plate_detector.pt')  # Custom YOLO model for license plate detection
+    license_plate_detector = YOLO('./YOLO-PretrainedModels/license_plate_detector.pt')  # Custom YOLO model for license plate detection
 
     # Load video for real-time processing (change path for live feed if needed)
     cap = cv2.VideoCapture('./videos/ParkingLot.mp4')
@@ -142,4 +142,4 @@ def plate_recog():
 
 
 # Call the main function
-plate_recog()
+# plate_recog()
