@@ -10,7 +10,7 @@ else:
     print("GPU is not available. Running on CPU.")
 
 # # Load a YOLOv8 model
-# model = YOLO('yolov8n.pt')  # You can change this to the appropriate model
+model = YOLO('yolov8n.pt')  # You can change this to the appropriate model
 
 # # Run inference (GPU will be used automatically if available)
 # # results = model('path_to_your_image_or_video')
