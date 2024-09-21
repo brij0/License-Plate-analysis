@@ -1,0 +1,10 @@
+# Path to the training and validation datasets
+path: D:/archive  # Base dataset directory
+
+
+train: images/train  # Training images folder relative to the base path
+val: images/val  # Validation images folder relative to the base path
+
+nc: 1
+names:
+  0: Licence_Plate
