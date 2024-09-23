@@ -55,7 +55,7 @@ def final_csvfile(csv_path):
 
 
 def read_data():
-    
+
     file = open('data.csv', "r")
     file_reader = csv.reader(file)
     data_list = list(file_reader)
@@ -76,7 +76,7 @@ def send_email_license(image_path, speed,receiver='denildubariya18@gmail.com'):
     msg['From'] = sender_email
     msg['To'] = receiver_email
     msg['Subject'] = f'Overspeed Challan {speed}'
-    custom_message = f'You were caught overspeeding at the speed of {speed} now you have to pay the chalan'
+    custom_message = f'You were caught overspeeding at the speed of {speed} now you have to pay the challan'
     with open(image_path, 'rb') as f:
         img = MIMEImage(f.read())
     msg.attach(img)
@@ -101,9 +101,6 @@ def plate_recog():
     # cap = cv2.VideoCapture(2)
 
     vehicles = [2, 3, 5, 7]
-    limit1=[0,137,1300,137]
-    limit2=[0,557,1300,557]
-    distance = 180
     # read frames
     frame_nmr = -1
     ret = True
@@ -122,23 +119,6 @@ def plate_recog():
                 x1, y1, x2, y2, score, class_id = detection
                 w, h = int(x2)-int(x1), int(y2)-int(y1)
                 bbox = int(x1), int(y1), int(w), int(h)
-                if int(class_id) in vehicles:
-                    detections_.append([x1, y1, x2, y2, score]) 
-                    cvzone.cornerRect(frame, bbox, l=9)
-                    cx,cy=int(x1)+w//2,int(y1)+h//2
-                    cv2.circle(frame,(cx,cy),5,(255,0,255),cv2.FILLED)
-                    if(limit1[0]<cx<limit1[2] and limit1[1]-10<cy<limit1[1]+10):
-                        detection_start_time = time.time()
-                    elif (limit2[0] < cx < limit2[2] and limit2[1]-10 < cy < limit2[1]+10):
-                        total_time=time.time()-detection_start_time
-                        actual_time=total_time/2.8333333
-                        speed=distance/actual_time
-                        if(speed>40):
-                            # coordinates=get_coordinates()
-
-                            cv2.imwrite('overspeed.jpg', frame)
-                            send_email_license('overspeed.jpg',speed)
-                            print("\n\n\n\n",speed,"\n\n\n\n\n")
             # track vehicles
             track_ids = mot_tracker.update(np.asarray(detections_))
 
