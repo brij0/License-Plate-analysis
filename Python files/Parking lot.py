@@ -2,9 +2,9 @@ from geopy.geocoders import Nominatim
 from ultralytics import YOLO
 import cv2
 import cvzone
-import utilIND
-from sort.sort import *
-from utilIND import get_car, read_license_plate, write_csv
+import utilFOR
+from sort import *
+from utilFOR import get_car, read_license_plate, write_csv
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -66,10 +66,10 @@ def plate_recog():
     mot_tracker = Sort()
 
     # Load YOLO models for object and license plate detection
-    license_plate_detector = YOLO('./YOLO-PretrainedModels/license_plate_detector.pt')  # Custom YOLO model for license plate detection
+    license_plate_detector = YOLO('yolov8n.pt')  # Custom YOLO model for license plate detection
 
     # Load video for real-time processing (change path for live feed if needed)
-    cap = cv2.VideoCapture('./videos/ParkingLot.mp4')
+    cap = cv2.VideoCapture('Traffic.mp4')
 
     # Vehicles class IDs in COCO dataset (cars, motorcycles, buses, etc.)
     vehicles = [2, 3, 5, 7]
@@ -125,3 +125,17 @@ def plate_recog():
             cv2.waitKey(1)
     final_csvfile('test.csv')
     write_csv(results,'test.csv')
+
+
+def main():
+    # Display message for starting the process
+    print("Starting license plate recognition at the parking lot...")
+
+    # Call the plate recognition function
+    plate_recog()
+
+    # Display message when the process is complete
+    print("License plate recognition completed.")
+
+if __name__ == "__main__":
+    main()
