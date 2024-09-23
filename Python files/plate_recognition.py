@@ -4,7 +4,7 @@ import cv2
 import cvzone
 import utilIND
 from sort.sort import *
-from utilIND import get_car, read_license_plate, write_csv
+from utilFOR import *
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -110,27 +110,19 @@ def plate_recog():
         ret, frame = cap.read()
         if ret:
             results[frame_nmr] = {}
-            # detect vehicles
-            detections = coco_model(frame)[0]
-            detections_ = []
-            cv2.line(frame,(limit1[0],limit1[1]),(limit1[2],limit1[3]),(0,0,255),5)
-            cv2.line(frame,(limit2[0],limit2[1]),(limit2[2],limit2[3]),(0,255,0),5)
-            for detection in detections.boxes.data.tolist():
-                x1, y1, x2, y2, score, class_id = detection
-                w, h = int(x2)-int(x1), int(y2)-int(y1)
-                bbox = int(x1), int(y1), int(w), int(h)
+
             # track vehicles
             track_ids = mot_tracker.update(np.asarray(detections_))
-
             # detect license plates
             license_plates = license_plate_detector(frame)[0]
             for license_plate in license_plates.boxes.data.tolist():
                 x1, y1, x2, y2, score, class_id = license_plate
-                # w, h = int(x2)-int(x1), int(y2)-int(y1)
-                # bbox = int(x1), int(y1), int(w), int(h)
+                w, h = int(x2)-int(x1), int(y2)-int(y1)
+                bbox = int(x1), int(y1), int(w), int(h)
 
                 # assign license plate to car
                 xcar1, ycar1, xcar2, ycar2, car_id = get_car(license_plate, track_ids)
+
 
                 if car_id != -1:
                     cvzone.cornerRect(frame, bbox, l=9)
@@ -160,5 +152,5 @@ def plate_recog():
         elif ret==True:
             cv2.imshow("Image", frame)
             cv2.waitKey(1)
-    write_csv(results,'test.csv')
     final_csvfile('test.csv')
+    write_csv(results,'test.csv')
