@@ -24,7 +24,7 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from skimage import io
-
+import lap  # type: ignore
 import glob
 import time
 import argparse
@@ -35,7 +35,6 @@ np.random.seed(0)
 
 def linear_assignment(cost_matrix):
   try:
-    import lap
     _, x, y = lap.lapjv(cost_matrix, extend_cost=True)
     return np.array([[y[i],i] for i in x if i >= 0]) #
   except ImportError:
@@ -328,3 +327,6 @@ if __name__ == '__main__':
 
   if(display):
     print("Note: to get real runtime results run without the option: --display")
+
+
+#  pip install path_to_downloaded_whl_file

@@ -3,7 +3,8 @@ from ultralytics import YOLO
 import cv2
 import cvzone
 import utilFOR
-from sort import *
+import numpy as np
+from sort.sort import Sort
 from utilFOR import get_car, read_license_plate, write_csv
 
 import smtplib
