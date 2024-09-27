@@ -9,11 +9,11 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [GitHub](#github)
 - [Contact](#contact)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Tests](#tests)
+- [License](#license)
 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/brij0/License-Plate-analysis?style=plastic)
@@ -84,6 +84,9 @@ To run this project locally, follow these steps:
 - **CCTV feed is processed**: each vehicle's license plate is recognized and compared to the list.
 - **Email notification**: If an unauthorized vehicle is detected, an email is automatically sent to the admin.
 
+
+
+
 ## Contributing
 
 Contributions to this project are welcome! Follow these steps:
@@ -96,7 +99,18 @@ Contributions to this project are welcome! Follow these steps:
 
 Please ensure that your code follows best practices and is well documented.
 
+## Github
 
+You can find the repository and more projects at my GitHub profile:
+
+- brij0's [GitHub Profile](https://github.com/brij0/)
+
+
+## Contact
+
+Feel free to reach out for any questions, feedback, or collaborations:
+
+- Email: bthakrar@uoguelph.ca
 ## Acknowledgements
 
 Special thanks to the following resources and individuals for their help and support throughout this project:
@@ -119,3 +133,4 @@ To run the tests, you can use the following command:
 
 ```bash
 pytest
+
