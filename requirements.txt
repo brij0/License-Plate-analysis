@@ -1,0 +1,11 @@
+opencv-python==4.5.5.64
+cvzone==1.5.6
+ultralytics==8.0.3
+numpy==1.21.6
+geopy==2.3.0
+smtplib
+email
+MIMEMultipart
+MIMEText
+MIMEImage
+csv

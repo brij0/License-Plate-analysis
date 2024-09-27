@@ -13,6 +13,8 @@
 - [GitHub](#github)
 - [Contact](#contact)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
+
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/brij0/License-Plate-analysis?style=plastic)
 ![GitHub top language](https://img.shields.io/github/languages/top/brij0/License-Plate-analysis?style=plastic)
@@ -42,12 +44,13 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/brij0/License-Plate-Recognition-System-for-parking-zone-monitoring.git
+    git clone https://github.com/brij0/License-Plate-analysis.git
     ```
+
     
 2. **Navigate to the project directory**:
     ```bash
-    cd License-Plate-Recognition-System-for-parking-zone-monitoring
+    cd License-Plate-analysis
     ```
     
 3. **Set up a virtual environment** (optional but recommended):
@@ -92,6 +95,23 @@ Contributions to this project are welcome! Follow these steps:
 5. Submit a pull request.
 
 Please ensure that your code follows best practices and is well documented.
+
+
+## Acknowledgements
+
+Special thanks to the following resources and individuals for their help and support throughout this project:
+
+- **YouTube Tutorials**: The following YouTube tutorials were invaluable in guiding the use of YOLOv8 and Python for this project:
+  - [YOLOv8 Object Detection by Computer vision engineer](https://www.youtube.com/watch?v=fyJB1t0o0ms)
+  - [Train YOLOv8 model by Computer vision engineer](https://www.youtube.com/watch?v=m9fH9OWn8YM)
+  - [README Generator by Anton Scheving](https://github.com/AntonScheving/README-Generator)
+  - [ChatGPT by OpenAI](https://chatgpt.com/)
+
+- **Friends**: A huge thanks to my friends for their help and feedback during the project. Check out their GitHub profiles:
+  - [Denil Dubariya](https://github.com/denildubariya18)
+  - [Jay Agrawat](https://github.com/JayAgravat1092)
+
+- **Ultralytics**: A special mention to Ultralytics for providing the YOLOv8 object detection models and thorough documentation that made this project possible. You can explore more on their [official website](https://ultralytics.com/).
 
 ## Tests
 
