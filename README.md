@@ -14,7 +14,7 @@
 - [Contact](#contact)
 - [License](#license)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/brij0/License-Plate-Recognition-System-for-parking-zone-monitoring?style=plastic)
+![GitHub repo size](https://github.com/brij0/License-Plate-analysis)
 ![GitHub top language](https://img.shields.io/github/languages/top/brij0/License-Plate-Recognition-System-for-parking-zone-monitoring?style=plastic)
 
 ## Description
