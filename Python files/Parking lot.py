@@ -48,7 +48,6 @@ def final_csvfile(csv_path):
             ])
 
 # Function to read the allowed vehicles from a CSV file
-import csv
 
 def is_allowed(license_plate, csv_file='allowed_cars.csv'):
     with open(csv_file, "r") as file:

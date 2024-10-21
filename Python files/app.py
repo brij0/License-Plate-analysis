@@ -1,9 +1,7 @@
 
 import cv2
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response # type: ignore
 from plate_recognition import *
-from fall_detection import *
-from CrashDetection import *
 app = Flask(__name__)
 
 # Function to capture frames from the video
